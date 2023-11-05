@@ -98,8 +98,8 @@ const Product = () => {
             <div className="col-md-6 col-sm-12 py-3">
               <img
                 className="img-fluid"
-                src={product.image}
-                // src={process.env.PUBLIC_URL + product.image}
+                // src={product.image}
+                src={process.env.PUBLIC_URL + product.image}
                 alt={product.title}
                 width="400px"
                 height="400px"
