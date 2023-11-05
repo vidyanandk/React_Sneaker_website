@@ -2,8 +2,23 @@ import React from 'react'
 import { Footer, Navbar } from "../components";
 import { Link } from 'react-router-dom';
 
+//now making resistration backend
+import {useState} from 'react';
 
 const Register = () => {
+
+    //extra thing
+    const [user,setUser]=useState({
+        name:"",email:"",password:""
+    });
+    let name,value;
+    const handleInputs=(e)=>{
+        console.log(e);
+        name=e.target.name;
+        value=e.target.value;
+
+        setUser({...user, [name]:value})
+    }
     return (
         <>
             <Navbar />
@@ -14,30 +29,42 @@ const Register = () => {
                     <div className="col-md-4 col-lg-4 col-sm-8 mx-auto">
                         <form>
                             <div class="form my-3">
-                                <label for="Name">Full Name</label>
+                                <label for="name">Full Name</label>
                                 <input
-                                    type="email"
+                                    type="text"
                                     class="form-control"
-                                    id="Name"
+                                    id="name"
                                     placeholder="Enter Your Name"
+                                    name="name"
+                                    autoComplete='off'
+                                    value={user.name}  
+                                    onChange={handleInputs}
                                 />
                             </div>
                             <div class="form my-3">
-                                <label for="Email">Email address</label>
+                                <label for="email">Email address</label>
                                 <input
                                     type="email"
                                     class="form-control"
-                                    id="Email"
+                                    id="email"
                                     placeholder="name@example.com"
+                                    name="email"
+                                    autoComplete='off'
+                                    value={user.email}  
+                                    onChange={handleInputs}
                                 />
                             </div>
                             <div class="form  my-3">
-                                <label for="Password">Password</label>
+                                <label for="password">Password</label>
                                 <input
                                     type="password"
                                     class="form-control"
-                                    id="Password"
+                                    id="password"
                                     placeholder="Password"
+                                    name="password"
+                                    autoComplete='off'
+                                    value={user.password}  
+                                    onChange={handleInputs}
                                 />
                             </div>
                             <div className="my-3">
