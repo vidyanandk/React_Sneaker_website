@@ -7,6 +7,8 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 import { Link } from "react-router-dom";
 
+import productsData from "../data/productsData"; // Update the path
+
 const Products = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
@@ -19,15 +21,20 @@ const Products = () => {
     dispatch(addCart(product))
   }
 
+
+ 
   useEffect(() => {
     const getProducts = async () => {
       setLoading(true);
-      const response = await fetch("https://fakestoreapi.com/products/");
-      if (componentMounted) {
-        setData(await response.clone().json());
-        setFilter(await response.json());
-        setLoading(false);
-      }
+      // Simulate an asynchronous operation (e.g., fetching from an API)
+      // For simplicity, we're using a setTimeout here
+      setTimeout(() => {
+        if (componentMounted) {
+          setData(productsData);
+          setFilter(productsData);
+          setLoading(false);
+        }
+      }, 1000);
 
       return () => {
         componentMounted = false;
@@ -36,6 +43,32 @@ const Products = () => {
 
     getProducts();
   }, []);
+
+
+
+
+
+
+  // useEffect(() => {
+  //   const getProducts = async () => {
+  //     setLoading(true);
+  //     const response = await fetch("https://fakestoreapi.com/products/");
+  //     if (componentMounted) {
+  //       setData(await response.clone().json());
+  //       setFilter(await response.json());
+  //       setLoading(false);
+  //     }
+
+  //     return () => {
+  //       componentMounted = false;
+  //     };
+  //   };
+
+  //   getProducts();
+  // }, []);
+
+
+
 
   const Loading = () => {
     return (
@@ -88,7 +121,8 @@ const Products = () => {
               <div className="card text-center h-100" key={product.id}>
                 <img
                   className="card-img-top p-3"
-                  src={product.image}
+                  // src={product.image}
+                  src={process.env.PUBLIC_URL + product.image}
                   alt="Card"
                   height={300}
                 />
