@@ -1,6 +1,6 @@
-# E-Commerce Website
+# React_Sneaker_website Website
 
-A Ecommerce Website made with React.js Framework.
+ React_Sneaker_website made with React.js Framework.
 
 ## Features
 
