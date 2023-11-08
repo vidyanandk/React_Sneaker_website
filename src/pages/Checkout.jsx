@@ -6,6 +6,7 @@ const Checkout = () => {
   const state = useSelector((state) => state.handleCart);
 
   const EmptyCart = () => {
+     
     return (
       <div className="container">
         <div className="row">
@@ -31,6 +32,13 @@ const Checkout = () => {
     state.map((item) => {
       return (totalItems += item.qty);
     });
+
+    //extra lines 
+   const conformMsg=()=>{
+       alert("!!!Your Order is accepted!!!");
+    }
+
+
     return (
       <>
         <div className="container py-5">
@@ -269,7 +277,7 @@ const Checkout = () => {
 
                     <button
                       className="w-100 btn btn-primary "
-                      type="submit" disabled
+                      type="submit" onClick={conformMsg}
                     >
                       Continue to checkout
                     </button>

@@ -123,8 +123,8 @@ const Products = () => {
               <div className="card text-center h-100" key={product.id}>
                 <img
                   className="card-img-top p-3"
-                  // src={product.image}
-                   src={process.env.PUBLIC_URL + product.image}
+                  src={product.image}
+                  //  src={process.env.PUBLIC_URL + product.image}
                   alt="Card"
                   height={300}
                 />

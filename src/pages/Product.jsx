@@ -29,7 +29,6 @@ const Product = () => {
       setLoading(true);
       setLoading2(true);
 
-      // Find the product from local data based on id
       const selectedProduct = productsData.find((item) => item.id.toString() === id);
       setProduct(selectedProduct || {});
 
@@ -47,23 +46,6 @@ const Product = () => {
 
 
 
-  // useEffect(() => {
-  //   const getProduct = async () => {
-  //     setLoading(true);
-  //     setLoading2(true);
-  //     const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-  //     const data = await response.json();
-  //     setProduct(data);
-  //     setLoading(false);
-  //     const response2 = await fetch(
-  //       `https://fakestoreapi.com/products/category/${data.category}`
-  //     );
-  //     const data2 = await response2.json();
-  //     setSimilarProducts(data2);
-  //     setLoading2(false);
-  //   };
-  //   getProduct();
-  // }, [id]);
 
 
 
@@ -98,8 +80,7 @@ const Product = () => {
             <div className="col-md-6 col-sm-12 py-3">
               <img
                 className="img-fluid"
-                // src={product.image}
-                src={process.env.PUBLIC_URL + product.image}
+                src={product.image}
                 alt={product.title}
                 width="400px"
                 height="400px"
@@ -153,7 +134,12 @@ const Product = () => {
     );
   };
 
+
+  
   const ShowSimilarProduct = () => {
+    // if (similarProducts.length === 0) {
+    //   return <p>No similar products available.</p>;
+    // }
     return (
       <>
         <div className="py-4 my-4">
@@ -163,8 +149,7 @@ const Product = () => {
                 <div key={item.id} className="card mx-4 text-center">
                   <img
                     className="card-img-top p-3"
-                    // src={item.image}
-                    src={process.env.PUBLIC_URL + item.image}
+                    src={item.image}
                     alt="Card"
                     height={300}
                     width={300}
@@ -199,6 +184,9 @@ const Product = () => {
       </>
     );
   };
+
+
+
   return (
     <>
       <Navbar />
@@ -212,7 +200,7 @@ const Product = () => {
               pauseOnClick={true}
               speed={50}
             >
-              {loading2 ? <Loading2 /> : <ShowSimilarProduct />}
+            {loading2 ? <Loading2 /> : <ShowSimilarProduct />}
             </Marquee>
           </div>
         </div>
