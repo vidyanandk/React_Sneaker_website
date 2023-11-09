@@ -13,7 +13,7 @@ const ContactPage = () => {
               <div class="form my-3">
                 <label for="Name">Name</label>
                 <input
-                  type="email"
+                  type="text"
                   class="form-control"
                   id="Name"
                   placeholder="Enter your name"
@@ -41,7 +41,6 @@ const ContactPage = () => {
                 <button
                   class="my-2 px-4 mx-auto btn btn-dark"
                   type="submit"
-                  disabled
                 >
                   Send
                 </button>

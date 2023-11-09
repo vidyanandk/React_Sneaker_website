@@ -31,12 +31,13 @@ const Product = () => {
 
       const selectedProduct = productsData.find((item) => item.id.toString() === id);
       setProduct(selectedProduct || {});
-
+      
       setLoading(false);
       const similarProductsData = productsData.filter(
         (item) => item.category === (selectedProduct ? selectedProduct.category : "")
-      );
-      setSimilarProducts(similarProductsData || []);
+        );
+        setSimilarProducts(similarProductsData || []);
+        console.log(product);
 
       setLoading2(false);
     };
