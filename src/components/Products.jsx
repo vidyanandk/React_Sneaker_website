@@ -112,7 +112,8 @@ const Products = () => {
             Women's Shoe
           </button>
 
-          {/* <button className="btn btn-outline-dark btn-sm m-2" onClick={() => filterProduct("jewelery")}>Jewelery</button> */}
+          <button className="btn btn-outline-dark btn-sm m-2" onClick={() => filterProduct("children shoe")}>children Shoe</button>
+          
           {/* <button className="btn btn-outline-dark btn-sm m-2" onClick={() => filterProduct("electronics")}>Electronics</button> */}
 
         </div>
