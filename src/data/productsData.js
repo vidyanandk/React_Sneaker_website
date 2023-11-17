@@ -152,6 +152,7 @@ const productsData = [
         price: 1093.19,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       }
+      //continue add more product
       // {
       //   id: 18,
       //   category: "woman's shoe",
