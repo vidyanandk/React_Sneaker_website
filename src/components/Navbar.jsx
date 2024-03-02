@@ -1,21 +1,21 @@
 import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import LoginG from './LoginG';
-import LogoutG from './LogoutG';
-import { gapi } from 'gapi-script';
-const clientId = "1074289233883-2u3i89rurj2tb9a1ctl923ntuv5fq6as.apps.googleusercontent.com"
+// import LoginG from './LoginG';
+// import LogoutG from './LogoutG';
+// import { gapi } from 'gapi-script';
+// const clientId = "1074289233883-2u3i89rurj2tb9a1ctl923ntuv5fq6as.apps.googleusercontent.com"
 
 const Navbar = () => {
-    useEffect(()=>{
-        function start(){
-            gapi.client.init({
-                clientId: clientId,
-                scope:""
-            })
-        }
-        gapi.load('client:auth2',start)
-    })
+    // useEffect(()=>{
+    //     function start(){
+    //         gapi.client.init({
+    //             clientId: clientId,
+    //             scope:""
+    //         })
+    //     }
+    //     gapi.load('client:auth2',start)
+    // })
 
     // var accessToken = gapi.auth.getToken().access_token
     // console.log(accessToken)
@@ -45,15 +45,16 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <div className="buttons text-center">
-                        <div style={{display:'flex'}}>
+                        {/*                         <div style={{display:'flex'}}>
                         <LoginG/>
                         <LogoutG/>
                         <NavLink to="/cart" className="btn btn-outline-dark m-2"><i className="fa fa-cart-shopping mr-1"></i> Cart ({state.length}) </NavLink>
-                        </div>
-                        {/* <NavLink id='signin' to="/login" className="btn btn-outline-dark m-2"><i className="fa fa-sign-in-alt mr-1"></i> Login</NavLink> */}
+                        </div> */}
+                        
+                        <NavLink id='signin' to="/login" className="btn btn-outline-dark m-2"><i className="fa fa-sign-in-alt mr-1"></i> Login</NavLink>
+                        <NavLink to="/register" className="btn btn-outline-dark m-2"><i className="fa fa-user-plus mr-1"></i> Register</NavLink>
                         {/* <NavLink to="/register" className="btn btn-outline-dark m-2"><i className="fa fa-user-plus mr-1"></i> Register</NavLink> */}
-                        {/* <NavLink to="/register" className="btn btn-outline-dark m-2"><i className="fa fa-user-plus mr-1"></i> Register</NavLink> */}
-                        {/* <NavLink to="/cart" className="btn btn-outline-dark m-2"><i className="fa fa-cart-shopping mr-1"></i> Cart ({state.length}) </NavLink> */}
+                        <NavLink to="/cart" className="btn btn-outline-dark m-2"><i className="fa fa-cart-shopping mr-1"></i> Cart ({state.length}) </NavLink>
                     </div>
                 </div>
 
