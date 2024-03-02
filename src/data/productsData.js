@@ -134,24 +134,24 @@ const productsData = [
         price: 403.19,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       },
-      {
-        id: 16,
-        category: "woman's shoe",
-        title: "Velvet Verve: Luxe for Your Every Step",
-        image: "../image/girlShoe6.jpg",
-        rating: { rate: 2.39 },
-        price: 178.19,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      },
-      {
-        id: 17,
-        category: "woman's shoe",
-        title: "Velvet Verve: Luxe for Your Every Step",
-        image: "../image/girlShoe7.jpg",
-        rating: { rate: 4.39 },
-        price: 1093.19,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      },
+      // {
+      //   id: 16,
+      //   category: "woman's shoe",
+      //   title: "Velvet Verve: Luxe for Your Every Step",
+      //   image: "../image/girlShoe6.jpg",
+      //   rating: { rate: 2.39 },
+      //   price: 178.19,
+      //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      // },
+      // {
+      //   id: 17,
+      //   category: "woman's shoe",
+      //   title: "Velvet Verve: Luxe for Your Every Step",
+      //   image: "../image/girlShoe7.jpg",
+      //   rating: { rate: 4.39 },
+      //   price: 1093.19,
+      //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      // },
 
 
       {
