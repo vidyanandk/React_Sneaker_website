@@ -37,6 +37,8 @@ Start the server
 
 * [React](https://reactjs.org/)
 * [Bootstrap](https://getbootstrap.com/)
+* [HTML](https://www.w3schools.com/Html/)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 ## Contributing
 
